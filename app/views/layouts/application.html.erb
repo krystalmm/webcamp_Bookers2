@@ -4,12 +4,23 @@
     <title>Bookers2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      
+    </header>
+    
+    <main class="mb-auto">
+      <%= yield %>
+    </main>
+    
+    <footer class="mt-5">
+      <p class="text-center">CopyRight Infratop.inc</p>
+    </footer>
   </body>
 </html>
