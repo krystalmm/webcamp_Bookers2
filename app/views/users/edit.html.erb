@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="user-info col-md-5 mx-auto p-0">
+      <h2>User info</h2>
+      <%= form_with model: @user, local: true do |f| %>
+        <div class="form-group">
+          <%= f.label :name %> <br>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <%= f.submit 'Update User', class: 'btn btn-secondary ' %>
+      <% end %>
+    </div>
+  </div>
+</div>

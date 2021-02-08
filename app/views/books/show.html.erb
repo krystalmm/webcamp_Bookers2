@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <%= render 'layouts/side' %>
+    <%= render 'layouts/side', book_user: @book_detail.user %>
     <div class="book-detail col-md-8 offset-1">
       <h2>Book detail</h2>
       <table class="table">
