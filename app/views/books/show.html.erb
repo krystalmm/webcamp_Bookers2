@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <%= render 'layouts/side' %>
+    <div class="book-detail col-md-8 offset-1">
+      <h2>Book detail</h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>img</td>
+            <td><%= link_to "#{@book_detail.title}", book_path(@book_detail) %></td>
+            <td><%= @book_detail.body %></td>
+            <% if @book_detail.user = current_user %>
+              <td></td>
+              <td><%= link_to 'Destroy', book_path(@book_detail), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: '本当に消しますか？' } %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
