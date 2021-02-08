@@ -9,7 +9,7 @@
             <td>img</td>
             <td><%= link_to "#{@book_detail.title}", book_path(@book_detail) %></td>
             <td><%= @book_detail.body %></td>
-            <% if @book_detail.user = current_user %>
+            <% if @book_detail.user == current_user %>
               <td></td>
               <td><%= link_to 'Destroy', book_path(@book_detail), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: '本当に消しますか？' } %></td>
             <% end %>
