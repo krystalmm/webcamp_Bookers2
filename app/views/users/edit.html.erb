@@ -7,7 +7,15 @@
           <%= f.label :name %> <br>
           <%= f.text_field :name, class: 'form-control' %>
         </div>
-        <%= f.submit 'Update User', class: 'btn btn-secondary ' %>
+        <div class="form-group">
+          <%= f.label :profile_image, 'Image' %> <br>
+          <%= f.attachment_field :profile_image %>
+        </div>
+        <div class="form-group">
+          <%= f.label :introduction %>
+          <%= f.text_area :introduction, class: 'form-control' %>
+        </div>
+        <%= f.submit 'Update User', class: 'btn btn-secondary mb-3' %>
       <% end %>
     </div>
   </div>

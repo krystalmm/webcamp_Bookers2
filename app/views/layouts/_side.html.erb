@@ -1,6 +1,6 @@
 <div class="side col-md-3 pl-0">
   <h2>User info</h2>
-  <%= image_tag('no_image.jpg') %>
+  <%= attachment_image_tag book_user, :profile_image, format: 'jpeg', fallback: 'no_image.jpg', size: "100x100" %>
   <table class="table">
     <tbody>
       <tr></tr>
@@ -10,11 +10,11 @@
       </tr>
       <tr>
         <th>introduction</th>
-        <th></th>
+        <th><%= book_user.introduction %></th>
       </tr>
     </tbody>
   </table>
-  <div class="row">
+  <div class="row mt-4 pt-3">
     <%= link_to edit_user_path(book_user), class: 'btn btn-outline-secondary btn-block btn-sm' do %>
       <i class="fas fa-user-cog"></i>
     <% end %>
